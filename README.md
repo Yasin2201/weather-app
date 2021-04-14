@@ -1,0 +1,1 @@
+A simple 'weather app' that fethes the weather data of any specified location
