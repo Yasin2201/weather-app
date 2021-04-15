@@ -1,0 +1,8 @@
+#displayWeather {
+    display: none;
+    border: solid 2px black;
+}
+
+#weatherInfo {
+    border: solid 2px black;
+}
