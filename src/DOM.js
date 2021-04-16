@@ -24,6 +24,7 @@ const printAddress = async (result) => {
 };
 
 function displayError() {
+    display.style.display = 'block'
     title.textContent = 'Error - Invalid Location Input'
     tempP.textContent = ''
     feelsLikeP.textContent = ''

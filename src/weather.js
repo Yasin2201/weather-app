@@ -1,6 +1,5 @@
 import { displayError } from './DOM'
 
-
 const searchBar = document.querySelector('#searchBar');
 
 function getUserInput() {
@@ -33,6 +32,3 @@ async function getWeather(city) {
 }
 
 export { getWeather, getUserInput }
-
-
-
