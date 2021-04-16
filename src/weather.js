@@ -21,7 +21,6 @@ async function getWeather(city) {
             humidity: getData.main.humidity,
             windSpeed: getData.wind.speed,
         }
-        console.log(weatherData)
         return weatherData
     }
 
