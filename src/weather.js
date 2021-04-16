@@ -8,7 +8,7 @@ function getUserInput() {
 }
 
 async function getWeather(city) {
-    const findWeather = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=cf6ba3ae4d919cedffb4f6a175c9a705`
+    const findWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=cf6ba3ae4d919cedffb4f6a175c9a705`
     try {
         const response = await fetch(findWeather, { mode: 'cors' });
 
