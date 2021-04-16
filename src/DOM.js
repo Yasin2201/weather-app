@@ -1,18 +1,18 @@
 const display = document.querySelector('#displayWeather')
-const title = document.querySelector('#placeName')
+const title = document.querySelector('#location')
 const tempP = document.querySelector('#temp')
 const feelsLikeP = document.querySelector('#feelsLike')
 const humidityP = document.querySelector('#humidity')
 const windSpeedP = document.querySelector('#windSpeed')
 
 const printAddress = async (result) => {
-    const a = await result;
+    const place = await result;
 
-    title.textContent = a.place
-    tempP.textContent = `Temperature: ${a.temperature}°C`
-    feelsLikeP.textContent = `Feels Like: ${a.feelsLike}°C`
-    humidityP.textContent = `Humidity: ${a.humidity}%`
-    windSpeedP.textContent = `Wind Speed: ${a.windSpeed} metres/sec`
+    title.textContent = place.location
+    tempP.textContent = `Temperature: ${place.temperature}°C`
+    feelsLikeP.textContent = `Feels Like: ${place.feelsLike}°C`
+    humidityP.textContent = `Humidity: ${place.humidity}%`
+    windSpeedP.textContent = `Wind Speed: ${place.windSpeed} metres/sec`
 
     display.style.display = 'block'
     display.appendChild(title)
@@ -23,4 +23,12 @@ const printAddress = async (result) => {
 
 };
 
-export default printAddress
+function displayError() {
+    title.textContent = 'Error - Invalid Location Input'
+    tempP.textContent = ''
+    feelsLikeP.textContent = ''
+    humidityP.textContent = ''
+    windSpeedP.textContent = ''
+}
+
+export { printAddress, displayError }

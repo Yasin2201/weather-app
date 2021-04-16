@@ -1,4 +1,4 @@
-import printAddress from './DOM'
+import { printAddress } from './DOM'
 import { getWeather, getUserInput } from './weather'
 
 

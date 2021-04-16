@@ -1,3 +1,6 @@
+import { displayError } from './DOM'
+
+
 const searchBar = document.querySelector('#searchBar');
 
 function getUserInput() {
@@ -13,7 +16,7 @@ async function getWeather(city) {
         const getData = await response.json();
 
         const weatherData = {
-            place: getData.name,
+            location: getData.name,
             temperature: getData.main.temp,
             feelsLike: getData.main.feels_like,
             humidity: getData.main.humidity,
@@ -24,7 +27,8 @@ async function getWeather(city) {
     }
 
     catch (err) {
-        console.error('Error')
+        console.error('Error - Invalid Location Input')
+        displayError()
     }
 }
 
